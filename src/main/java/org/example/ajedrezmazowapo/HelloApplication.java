@@ -11,7 +11,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage window) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("tablero.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 800);
         window.setResizable(false);
         window.setTitle("Ajedrez");
         window.setScene(scene);

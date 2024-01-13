@@ -3,7 +3,9 @@ package org.example.ajedrezmazowapo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
+import org.example.ajedrezmazowapo.util.ColorAjedrez;
+import org.example.ajedrezmazowapo.util.Pieza;
+import org.example.ajedrezmazowapo.util.TipoPieza;
 
 import java.io.IOException;
 
@@ -22,13 +24,26 @@ public class Tablero {
                 Casilla casilla = fxmlLoader.getController();
                 casillas[x][y] = casilla;
                 if ((x + y) % 2 == 0) {
-                    casilla.setColor(Color.WHITE);
+                    casilla.setColor(ColorAjedrez.BLANCO);
                 } else {
-                    casilla.setColor(Color.BLACK);
+                    casilla.setColor(ColorAjedrez.NEGRO);
                 }
             }
         }
 
-        casillas[5][2].setColor(Color.RED);
+        for (int x = 0; x < 8; x++) {
+            casillas[x][1].setPieza(new Pieza(TipoPieza.PEON, ColorAjedrez.NEGRO));
+        }
+        for (int x = 0; x < 8; x++) {
+            casillas[x][6].setPieza(new Pieza(TipoPieza.PEON, ColorAjedrez.BLANCO));
+        }
+    }
+
+    public void moverPieza(int x, int y, int destinoX, int destinoY) {
+        Casilla casillaOrigen = casillas[x][y];
+        Casilla casillaDestino = casillas[destinoX][destinoY];
+        Pieza p = casillaOrigen.piezaActual;
+        casillaDestino.setPieza(p);
+        casillaOrigen.setPieza(null);
     }
 }
