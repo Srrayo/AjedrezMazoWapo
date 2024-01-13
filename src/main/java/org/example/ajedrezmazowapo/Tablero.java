@@ -37,6 +37,25 @@ public class Tablero {
         for (int x = 0; x < 8; x++) {
             casillas[x][6].setPieza(new Pieza(TipoPieza.PEON, ColorAjedrez.BLANCO));
         }
+
+        casillas[0][0].setPieza(new Pieza(TipoPieza.TORRE, ColorAjedrez.NEGRO));
+        casillas[7][0].setPieza(new Pieza(TipoPieza.TORRE, ColorAjedrez.NEGRO));
+        casillas[1][0].setPieza(new Pieza(TipoPieza.CABALLO, ColorAjedrez.NEGRO));
+        casillas[6][0].setPieza(new Pieza(TipoPieza.CABALLO, ColorAjedrez.NEGRO));
+        casillas[2][0].setPieza(new Pieza(TipoPieza.ALFIL, ColorAjedrez.NEGRO));
+        casillas[5][0].setPieza(new Pieza(TipoPieza.ALFIL, ColorAjedrez.NEGRO));
+        casillas[3][0].setPieza(new Pieza(TipoPieza.REINA, ColorAjedrez.NEGRO));
+        casillas[4][0].setPieza(new Pieza(TipoPieza.REY, ColorAjedrez.NEGRO));
+
+        casillas[0][7].setPieza(new Pieza(TipoPieza.TORRE, ColorAjedrez.BLANCO));
+        casillas[7][7].setPieza(new Pieza(TipoPieza.TORRE, ColorAjedrez.BLANCO));
+        casillas[1][7].setPieza(new Pieza(TipoPieza.CABALLO, ColorAjedrez.BLANCO));
+        casillas[6][7].setPieza(new Pieza(TipoPieza.CABALLO, ColorAjedrez.BLANCO));
+        casillas[2][7].setPieza(new Pieza(TipoPieza.ALFIL, ColorAjedrez.BLANCO));
+        casillas[5][7].setPieza(new Pieza(TipoPieza.ALFIL, ColorAjedrez.BLANCO));
+        casillas[3][7].setPieza(new Pieza(TipoPieza.REINA, ColorAjedrez.BLANCO));
+        casillas[4][7].setPieza(new Pieza(TipoPieza.REY, ColorAjedrez.BLANCO));
+
     }
 
     public void moverPieza(int x, int y, int destinoX, int destinoY) {

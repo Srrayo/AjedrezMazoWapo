@@ -5,5 +5,5 @@ png: 1024x1024
 
 
 fichas = nombreFicha_b.png
--nombreFicha_b = blancas.
--nombreFicha_n = niggers.
+-nombreFicha_w = blancas.
+-nombreFicha_b = niggers.

@@ -5,7 +5,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import org.example.ajedrezmazowapo.util.ColorAjedrez;
+import org.example.ajedrezmazowapo.util.EstadoCasilla;
 import org.example.ajedrezmazowapo.util.Pieza;
 import org.example.ajedrezmazowapo.util.TipoPieza;
 
@@ -16,9 +18,14 @@ public class Casilla {
     private HBox casillaBox;
 
     public Pieza piezaActual;
+    public EstadoCasilla estado = EstadoCasilla.DESELECCIONADO;
+
+    public Color colorOriginal;
+
 
     public void setColor(ColorAjedrez color) {
         casillaBox.setBackground(Background.fill(color.toColorjavaFx()));
+
     }
 
     public void setPieza(Pieza pieza) {
