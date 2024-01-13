@@ -1,0 +1,9 @@
+HK:reina,alfil,torre
+RY:rey,peon,caballo
+
+png: 1024x1024
+
+
+fichas = nombreFicha_b.png
+-nombreFicha_b = blancas.
+-nombreFicha_n = niggers.

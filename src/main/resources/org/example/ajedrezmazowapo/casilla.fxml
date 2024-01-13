@@ -11,5 +11,4 @@
       fx:controller="org.example.ajedrezmazowapo.Casilla"
       fx:id="casillaBox"
       prefWidth="9999999" prefHeight="9999999">
-
 </HBox>
